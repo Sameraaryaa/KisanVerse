@@ -23,7 +23,11 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#4CAF50"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -31,6 +35,11 @@
     },
     "plugins": [
       "expo-av"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "566d1e3a-b1ea-4929-ba45-682e1ae61f96"
+      }
+    }
   }
 }

@@ -137,10 +137,13 @@ export default function HomeDashboardScreen({ navigation }) {
 
             <ScrollView
                 style={styles.container}
+                contentContainerStyle={styles.scrollContent}
                 refreshControl={
                     <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
                 }
                 showsVerticalScrollIndicator={false}
+                bounces={true}
+                overScrollMode="always"
             >
                 {/* Header */}
                 <View style={styles.header}>
@@ -243,6 +246,10 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
+    },
+    scrollContent: {
+        flexGrow: 1,
+        paddingBottom: 20,
     },
     loadingContainer: {
         flex: 1,
